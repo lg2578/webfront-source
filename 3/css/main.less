@@ -1,0 +1,735 @@
+@bgColor: #06C1AE; //背景颜色
+@tipsColor: #FFA802; //提示信息颜色
+@warningColor: #FB4B00; //警告信息颜色
+@normalSize: 14px; //正常字体，在common.css里定义
+@smallerSize: @normalSize - 2px; //小一号字体
+@biggerSize: @normalSize+2px; //大一号字体
+.roundedRadius(@radius: 5px) //带参圆角定义
+
+    {
+    border-radius: @radius;
+}
+
+/*1*/
+.wrap {
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.headtitle {
+    height: 40px;
+    line-height: 40px;
+    background-color: @bgColor;
+    text-indent: 10px;
+    color: #fff;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.loginbox {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputwrap {
+    height: 40px;
+	line-height: 40px;
+	text-align: center;
+	width: 60%;
+//	margin:10px auto;
+    .inputtxt {
+        width: 100%;
+        height: 30px;
+        line-height: 30px;
+        border: none;
+        background: none;
+        border: 1px solid #ccc;
+        text-indent: 10px;
+        outline: none;
+        .roundedRadius;
+    }
+    span {
+        color: @tipsColor;
+    }
+}
+.tips {
+	height: 30px;
+	line-height: 30px;
+	margin-top: 10px;
+	text-align: center;
+	font-size: 14px;
+	color: #666;
+}
+.loginbtn {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    border: none;
+    background: none;
+    background-color: @bgColor;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    .roundedRadius;
+
+
+}
+
+
+/*2register*/
+.cortbtn {
+    padding: 6px;
+    background-color: @tipsColor;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.2);
+    margin-bottom: 5px;
+    border: 0;
+    cursor: pointer;
+    .roundedRadius;
+    border: 1px solid #F00 rgba(0, 0, 0, 0.5);
+    -webkit-appearance: none;
+}
+
+/*3cart*/
+.shopcarpro {
+    padding: 3px;
+    background-color: #FAFAFA;
+    border-bottom: 1px dotted #ddd;
+    padding-right: 15px;
+    // display: -moz-box;
+    // display: -webkit-box;
+    // display: box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    .choose {
+        width: 30px;
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .img {
+        width: 100px;
+        height: 100px;
+
+        img {
+            width: 100px;
+            height: 100px;
+        }
+    }
+
+    .txtbox {
+        margin-left: 5px;
+        // -moz-box-flex: 1;
+        //  -webkit-box-flex: 1;
+        //   box-flex: 1;
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+
+        .title {
+            height: 40px;
+            line-height: 20px;
+            color: #000;
+            overflow: hidden;
+        }
+
+        .txt {
+            height: 20px;
+            line-height: 20px;
+            margin-top: 5px;
+            color: #555;
+        }
+
+        .price {
+            height: 20px;
+            line-height: 20px;
+            margin-top: 5px;
+            color: @tipsColor;
+
+            span {
+                float: right;
+                color: #666;
+            }
+        }
+    }
+
+
+}
+
+.shopcarbottom {
+    padding-left: 3px;
+    .bottombox;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    .choose {
+        width: 30px;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .txt {
+        line-height: 50px;
+        color: #666;
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+
+        span {
+            float: right;
+            margin-right: 10px;
+
+            .price {
+                margin-top: 3px;
+                height: 22px;
+                line-height: 22px;
+                color: #333;
+                text-align: right;
+            }
+
+            .express {
+                height: 22px;
+                line-height: 22px;
+                text-align: right;
+                font-size: @smallerSize;
+                color: #999;
+            }
+        }
+    }
+
+    .btn {
+        width: 140px;
+        background-color: @warningColor;
+        text-align: center;
+        height: 50px;
+        line-height: 50px;
+        color: #fff;
+
+        a {
+            display: block;
+            color: #fff;
+        }
+    }
+
+}
+
+/*4*/
+
+.protoppic {
+    position: relative;
+    min-height: 300px;
+
+    .btnbox {
+        position: absolute;
+        z-index: 99;
+        top: 20px;
+        left: 0;
+        right: 0;
+    }
+
+    .leftbtn {
+        margin-left: 10px;
+        float: left;
+    }
+
+    .rightbtn {
+        margin-right: 10px;
+        float: right;
+    }
+}
+
+.proconbox {
+    margin-bottom: 50px;
+}
+
+.procontitle {
+    height: 50px;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    .title {
+        line-height: 25px;
+        color: #000;
+    }
+
+    .share {
+        width: 60px;
+        text-align: center;
+
+        .icon {
+            height: 20px;
+            padding-top: 5px;
+        }
+
+        .txt {
+            height: 25px;
+            line-height: 25px;
+            color: #333;
+        }
+    }
+}
+
+.proconprice1 {
+    height: 30px;
+    line-height: 30px;
+    color: @tipsColor;
+}
+
+.proconprice1 span {
+    font-size: @normalSize+10px;
+}
+
+.proconprice2 {
+    height: 24px;
+    line-height: 24px;
+    color: #333;
+}
+
+.proconprice2 span {
+    text-decoration: line-through;
+}
+
+.proconexpress {
+    margin-top: 5px;
+    height: 30px;
+    line-height: 30px;
+    color: #333;
+}
+
+.proconexpress .left {
+    width: 33.3%;
+    float: left;
+    text-align: left;
+}
+
+.proconexpress .mid {
+    width: 33.3%;
+    float: left;
+    text-align: center;
+}
+
+.proconexpress .right {
+    width: 33.3%;
+    float: left;
+    text-align: right;
+}
+
+.proinsure {
+    height: 36px;
+    line-height: 36px;
+    padding: 0px 5px;
+    background: #FAFAFA url(../images/picon5.png) no-repeat 99% center;
+    background-size: 16px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+    li {
+        background: url(../images/picon6.png) no-repeat left center;
+        text-indent: 20px;
+        margin-right: 20px;
+        background-size: 16px;
+        float: left;
+        color: #333;
+    }
+}
+
+.prodetailtitle {
+    margin-top: 8px;
+    height: 36px;
+    line-height: 36px;
+    font-size: @biggerSize;
+    padding: 0px 5px;
+    background: #fff url(../images/picon5.png) no-repeat 99% center;
+    background-size: 16px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+
+.probottom {
+
+    .bottombox;
+
+    .qq {
+        width: 15%;
+        text-align: center;
+        float: left;
+        color: #fff;
+        height: 50px;
+        line-height: 50px;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        border-right: 1px solid #ddd;
+    }
+
+    .img {
+        text-align: center;
+        height: 30px;
+        line-height: 32px;
+    }
+
+    .txt {
+        text-align: center;
+        line-height: 20px;
+        height: 20px;
+        font-size: @smallerSize;
+    }
+
+    .fav {
+        width: 15%;
+        text-align: center;
+        float: left;
+        color: #fff;
+        height: 50px;
+        line-height: 50px;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    .shopcar {
+        width: 35%;
+        float: left;
+        height: 50px;
+        line-height: 50px;
+        background-color: @tipsColor;
+        text-align: center;
+        font-size: @biggerSize;
+        color: #fff;
+
+        a {
+            color: #fff;
+            display: block;
+        }
+    }
+
+    .buy {
+        width: 35%;
+        float: left;
+        height: 50px;
+        line-height: 50px;
+        background-color: @warningColor;
+        text-align: center;
+        font-size: @biggerSize;
+        color: #fff;
+
+        a {
+            color: #fff;
+            display: block;
+        }
+    }
+
+
+}
+
+/*5member*/
+.centertop {
+    background-color: @bgColor;
+    padding: 10px;
+
+    .icon {
+        height: 30px;
+        line-height: 30px;
+        text-align: right;
+
+        a {
+            display: inline-block;
+            width: 40px;
+            text-align: center;
+        }
+    }
+
+    .info {
+        margin-top: 10px;
+
+        .img {
+            width: 50px;
+            height: 50px;
+            border: 3px solid darken(@bgColor, 2%);
+            float: left;
+            .roundedRadius(50%);
+
+            img {
+                width: 50px;
+                height: 50px;
+                .roundedRadius(50%);
+            }
+        }
+    }
+
+    .txtbox {
+        float: left;
+        margin-left: 5px;
+        margin-top: 4px;
+
+        .txt {
+            height: 24px;
+            line-height: 24px;
+            color: #fff;
+
+            a {
+                color: #fff;
+                display: block;
+            }
+        }
+    }
+}
+
+.centerlist {
+    margin-top: 8px;
+
+    li {
+        height: 42px;
+        line-height: 42px;
+        border-bottom: 1px solid #ddd;
+        background-color: #fff;
+        text-indent: 5px;
+
+        img {
+            margin-top: -3px;
+            margin-right: 5px;
+        }
+
+        span {
+            color: #666;
+            float: right;
+            margin-right: 8px;
+        }
+
+        a {
+            display: block;
+        }
+    }
+}
+
+/*6*/
+.topbox {
+    width: 100%;
+    height: 50px;
+    background-color: @bgColor;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    .topscan {
+        width: 50px;
+        text-align: center;
+        margin-top: 6px;
+    }
+
+    .topsearchbox {
+        margin-top: 8px;
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+
+        .left {
+            width: 80%;
+            float: left;
+
+            .topinputxt {
+                height: 32px;
+                line-height: 32px;
+                border: 1px solid #ccc;
+                width: 100%;
+                background: #fff url(../images/searchbtn.png) no-repeat 3px center;
+                background-size: 22px;
+                text-indent: 30px;
+                -webkit-appearance: none;
+                border-top-left-radius: 4px;
+                border-bottom-left-radius: 4px;
+            }
+        }
+
+        .right {
+            width: 20%;
+            float: right;
+
+            .topsearchbtn {
+                height: 34px;
+                line-height: 34px;
+                border: 1px solid #ccc;
+                -webkit-appearance: none;
+                width: 90%;
+                border: none;
+                background: none;
+                background-color: @tipsColor;
+                color: #fff;
+                border-top-right-radius: 4px;
+                border-bottom-right-radius: 4px;
+            }
+        }
+    }
+
+}
+
+.bottombox {
+    max-width: 480px;
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0px auto;
+    border-top: 1px solid #ddd;
+    background-color: #fff;
+    z-index: 9999;
+}
+
+.bottombtn {
+    width: 25%;
+    text-align: center;
+    float: left;
+    color: #fff;
+    height: 40px;
+    line-height: 40px;
+
+    a {
+        display: block;
+        color: #6D6D6D;
+    }
+
+    .img {
+        text-align: center;
+        height: 30px;
+        line-height: 32px;
+    }
+
+    .txt {
+        text-align: center;
+        line-height: 20px;
+        height: 20px;
+        font-size: @smallerSize;
+    }
+}
+
+.linkbox {
+    margin: 0px auto;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    background-color: #fff;
+    margin-top: 8px;
+    padding: 3px 0px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+
+    .linkbtn {
+        width: 25%;
+        text-align: center;
+        //float: left;
+        color: #fff;
+        height: 76px;
+        line-height: 50px;
+
+        a {
+            display: block;
+            color: #6D6D6D;
+        }
+
+        .img {
+            text-align: center;
+            height: 44px;
+            line-height: 44px;
+        }
+
+        .txt {
+            text-align: center;
+            line-height: 32px;
+            height: 32px;
+            font-size: @smallerSize;
+        }
+    }
+}
+
+
+
+.indextopnews {
+    height: 42px;
+    line-height: 42px;
+    background-color: #fff;
+    color: #222;
+    padding: 3px 0px;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    .left {
+        width: 60px;
+        text-align: center;
+        border-right: 1px solid #ccc;
+    }
+
+    .right {
+
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        text-indent: 10px;
+
+    }
+}
+
+.indexprobox {
+    margin-top: 8px;
+    border-top: 1px solid #ddd;
+}
+
+.indextitle {
+    height: 36px;
+    //line-height: 36px;
+    background-color: #fff;
+    color: @bgColor;
+    // text-align: center;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        //   margin-top: - 3px;
+        margin-right: 5px;
+    }
+
+    a {
+        color: @tipsColor;
+
+    }
+}
+
+.indexpro {
+    width: 50%;
+    float: left;
+    border-right: 1px solid #ddd;
+    background-color: #fff;
+    padding: 5px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+    &:nth-child(2n+1) {
+        border-right: 1px solid #fff;
+    }
+
+    .txt {
+        height: 32px;
+        line-height: 32px;
+        color: #000;
+        text-align: center;
+    }
+
+    .price {
+        height: 28px;
+        line-height: 28px;
+        color: @tipsColor;
+        text-align: center;
+    }
+
+}

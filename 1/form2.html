@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript演示</title>
+<script type="text/javascript">
+	function zifushu(n)
+	{
+		var v1=document.getElementById("v1");
+		alert(v1.value);
+		var l=v1.value.length;
+		if(l<=n)
+			{
+				alert("v1的字符数少于"+n+"个");
+			}
+		
+	}
+	function mimaxiangtong()
+	{
+		var v1=document.getElementById("v1");
+		var v2=document.getElementById("v2");
+		if(v1.value==v2.value)
+			{
+				//不做任何操作
+			}
+		else
+			{
+				alert("两次的密码不一致");
+			}
+	}
+</script> 
+</head>
+<body>
+文本框<input id="v1" type="text" value="123" onBlur="zifushu(6)"><br>
+密码框<input id="v2" type="password" value="123" onBlur="mimaxiangtong()"><br>
+多选一<input type="checkbox">
+多选二<input type="checkbox"><br>
+单选一<input type="radio" name="danxuan">
+单选二<input type="radio" name="danxuan"><br>
+文件上传<input type="file"><br>
+按钮<input type="button" value="按钮">
+</body>
+</html>

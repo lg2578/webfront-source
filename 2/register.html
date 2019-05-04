@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" />
+
+<head>
+  <title>会员注册</title>
+  <link href="css/common.css" rel="stylesheet" type="text/css" />
+  <link href="css/main.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="headtitle">会员注册</div>
+    <div class="loginbox">
+      <div class="inputwrap">
+        <input type="text" id="txtMobile" placeholder="请输入手机号作为用户名" onblur="validateTel()" class="inputtxt" autofocus
+          required>
+      </div>
+      <div class="inputwrap">
+        <input type="text" placeholder="请输入真实姓名" class="inputtxt" required>
+      </div>
+      <div class="inputwrap">
+        <input type="password" id="pwd" placeholder="登录密码" class="inputtxt" onblur="validatePWD()" autofocus required>
+      </div>
+      <div class="inputwrap">
+
+        <input type="password" placeholder="确认登录密码" class="inputtxt" required>
+
+      </div>
+      <div class="inputwrap">
+
+        <input type="password" placeholder="交易密码" class="inputtxt" autofocus required>
+
+      </div>
+      <div class="inputwrap">
+
+        <input type="password" placeholder="确认交易密码" class="inputtxt" required>
+
+      </div>
+      <div class="inputwrap">
+
+        <input type="text" placeholder="推荐人帐号" class="inputtxt" autofocus required>
+
+      </div>
+      <div class="inputwrap">
+
+        <input name="tbxYZM" type="text" maxlength="6" placeholder="验证码" class="inputtxt" style="width:80px" />
+        <span>*</span>
+        <input id="btnSendYZM" type="button" class="cortbtn" value="发送验证码" />
+
+      </div>
+      <div class="inputwrap tips">
+
+        <input id="tbxXYTK" type="checkbox" name="tbxXYTK" checked="checked" />
+        <a href="#">我已阅读并同意《佰商惠商城注册条款》</a>
+      </div>
+
+      <div class="inputwrap">
+        <input name="" type="button" value="立即注册" class="loginbtn">
+      </div>
+      <div class="inputwrap tips">已有帐号，立即去 <a href="#"><span>登录</span></a></div>
+    </div>
+
+  </div>
+
+  <script type="text/javascript" src="js/register.js"> </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+
+<head>
+   <meta charset="utf-8">
+   <title>购物车</title>
+   <link href="css/common.css" rel="stylesheet" type="text/css" />
+   <link href="css/main.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+   <div class="wrap">
+      <div class="shopcarpro">
+         <div class="choose"><input  price="25" count="2" name="mychk" type="checkbox" class="checkclass"  ></div>
+         <div class="img"><img src="images/propic.jpg"></div>
+         <div class="txtbox">
+            <div class="title">茉莉花茶 新茶2017浓香茉莉花茶叶花茶散装小白毫 买1送1共500克</div>
+            <div class="txt">新茶上市</div>
+            <div class="price"><span>×2</span>¥<font style="font-size:16px;">25</font>&nbsp;&nbsp;&nbsp;<font
+                  style="text-decoration:line-through; color:#666;">¥68</font>
+            </div>
+         </div>
+      </div>
+      <div class="shopcarpro">
+         <div class="choose"><input  price="18" count="2" name="mychk" type="checkbox" class="checkclass" ></div>
+         <div class="img"><img src="images/propic.jpg"></div>
+         <div class="txtbox">
+            <div class="title">茉莉花茶 新茶2017浓香茉莉花茶叶花茶散装小白毫 买1送1共500克</div>
+            <div class="txt">新茶上市</div>
+            <div class="price"><span>×2</span>¥<font style="font-size:16px;">18</font>&nbsp;&nbsp;&nbsp;<font
+                  style="text-decoration:line-through; color:#666;">¥68</font>
+            </div>
+         </div>
+      </div>
+      <div class="shopcarbottom">
+         <div class="choose">
+            <input id="all" type="checkbox" name="yon" onclick="chk()">
+         </div>
+         <div class="txt">
+            <span>
+               <div class="price">合计：<span style=" color:#f60;" id="allprice">¥0</span>
+               </div>
+               <div class="express">不含邮费</div>
+            </span>
+            全选</div>
+         <div class="btn"><a href="#">结算(0)</a></div>
+      </div>
+
+   </div>
+   <script type="text/javascript" src="js/cart.js"></script>
+</body>
+
+</html>

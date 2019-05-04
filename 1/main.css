@@ -1,0 +1,54 @@
+﻿
+/* CSS 文件 */
+body{
+	font-size: 20px;
+	font-family: "微软雅黑";
+	color:#999;
+}
+.box1{
+	width:200px;
+	height: 100px;
+	border: 1px solid #000;
+	padding: 5px;
+}
+.box2{
+	width: 40%;
+	height: 40%;
+	background-color: #999;
+	margin: 10px;
+	float: left;
+}
+.list1{
+	list-style-image: url(picon6.png);
+}
+.box3{
+	column-count: 2;
+	column-gap: 5px;
+}
+.box4{
+	position:relative;
+}
+.box41{
+	
+	color:#fff;
+	background-color: #999;
+	position:fixed;
+	bottom:0px;
+}
+.wrap{
+	width:400px;
+	border:1px solid #000;
+	text-align:center;
+	margin:0 auto;
+	height:120px;
+}
+.row .left{
+	float:left;
+	text-align:right;
+	width:30%;
+}
+.row .right{
+	float:left;
+	text-align:left;
+	width:70%;
+}
