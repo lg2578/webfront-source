@@ -4,8 +4,22 @@
 <head>
     <meta charset="utf-8">
     <title>首页</title>
+    <script src=" https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
 </head>
 
-<body>ggggg</body>
+<body>
+    <div id="app">
+        <p>{{msg}}</p>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                msg: 'Hello Vue.js!'
+            }
+        })
+    </script>
+</body>
 
 </html>
